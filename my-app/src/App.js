@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import CountBtn from './CountBtn.jsx';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -8,9 +9,10 @@ function App() {
       <header className="App-header">
         <div>
           <p>You clicked {count} times</p>
-          <button onClick={() => setCount(count + 1)}>
-            Click me
-          </button>
+          <CountBtn
+            setCount={setCount}
+            count={count}
+          />
         </div>
       </header>
     </div>
